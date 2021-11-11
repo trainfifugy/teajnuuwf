@@ -29,12 +29,12 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           git clone -b main https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com/sampreeth20/wfcomp
+           git clone -b main https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com/Krispychip2/krispwf
        - name: Running PrivateEncoderV2.0 Bot 
          timeout-minutes: 300
          continue-on-error: true
          run: |
-           cd wfcomp
+           cd krispwf
            docker build -t compressor . && docker run compressor
            
        - name: Loop workflow
