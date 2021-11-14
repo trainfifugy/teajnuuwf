@@ -31,7 +31,7 @@ jobs:
          run: |
            git clone -b main https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com/Krispychip2/krispwf
        - name: Running PrivateEncoderV2.0 Bot 
-         timeout-minutes: 300
+         timeout-minutes: 350
          continue-on-error: true
          run: |
            cd krispwf
